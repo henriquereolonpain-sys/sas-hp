@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique Pain — Finanças com Dados</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23060a14'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='13' fill='%23a3e635'>HP</text></svg>">
+
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Consultoria financeira orientada a dados para PMEs: DRE gerencial, fluxo de caixa, projeções e dashboards em tempo real. Pare de decidir no achismo.">
+    <meta property="og:title"       content="Henrique Pain — Finanças com Dados">
+    <meta property="og:description" content="DRE, fluxo de caixa, projeções e dashboards que mostram a verdade do seu negócio. Diagnóstico gratuito.">
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="pt_BR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glow blobs de fundo -->
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">HP<span>_</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#metodo">Método</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20agendar%20um%20diagn%C3%B3stico%20financeiro%20gratuito." target="_blank" rel="noopener" class="nav-cta">Diagnóstico gratuito ↗</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+            <img src="img/hero-chart.webp" alt="">
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Agenda aberta para novos clientes — Julho 2026
+                </div>
+                <h1 class="hero-headline">
+                    Chega de gerenciar<br>sua empresa <em>no escuro.</em>
+                </h1>
+                <p class="hero-desc">
+                    DRE gerencial, fluxo de caixa, projeções e dashboards em tempo real —
+                    montados por um <strong>economista certificado</strong> que fala a língua dos dados.
+                    Você decide com números, não com achismo.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20agendar%20um%20diagn%C3%B3stico%20financeiro%20gratuito." target="_blank" rel="noopener" class="btn-mega">
+                        Quero um diagnóstico gratuito
+                        <span class="btn-mega-arrow">→</span>
+                    </a>
+                    <a href="#servicos" class="btn-ghost">Ver serviços</a>
+                </div>
+                <p class="hero-microcopy">✓ 30 minutos &nbsp;·&nbsp; ✓ sem compromisso &nbsp;·&nbsp; ✓ resposta no WhatsApp em minutos</p>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="dash-card">
+                    <div class="dash-header">
+                        <span class="dash-title">Visão Executiva · Junho 2026</span>
+                        <span class="dash-live"><span class="live-dot"></span>ao vivo</span>
+                    </div>
+                    <div class="dash-kpis">
+                        <div class="dash-kpi">
+                            <span class="kpi-label">Receita</span>
+                            <span class="kpi-value">R$ 184k</span>
+                            <span class="kpi-delta up">▲ 12,4%</span>
+                        </div>
+                        <div class="dash-kpi">
+                            <span class="kpi-label">Margem EBITDA</span>
+                            <span class="kpi-value">23,1%</span>
+                            <span class="kpi-delta up">▲ 4,2 p.p.</span>
+                        </div>
+                        <div class="dash-kpi">
+                            <span class="kpi-label">Caixa projetado</span>
+                            <span class="kpi-value">92 dias</span>
+                            <span class="kpi-delta">estável</span>
+                        </div>
+                    </div>
+                    <div class="dash-bars">
+                        <div class="bar" style="--h:38%; --d:.1s"></div>
+                        <div class="bar" style="--h:52%; --d:.2s"></div>
+                        <div class="bar" style="--h:44%; --d:.3s"></div>
+                        <div class="bar" style="--h:65%; --d:.4s"></div>
+                        <div class="bar" style="--h:58%; --d:.5s"></div>
+                        <div class="bar" style="--h:78%; --d:.6s"></div>
+                        <div class="bar bar-hl" style="--h:92%; --d:.7s"></div>
+                    </div>
+                    <svg class="dash-spark" viewBox="0 0 300 60" preserveAspectRatio="none">
+                        <path class="spark-area" d="M0,48 L30,42 L60,45 L90,34 L120,38 L150,26 L180,30 L210,18 L240,22 L270,10 L300,6 L300,60 L0,60 Z"/>
+                        <path class="spark-line" d="M0,48 L30,42 L60,45 L90,34 L120,38 L150,26 L180,30 L210,18 L240,22 L270,10 L300,6"/>
+                    </svg>
+                </div>
+                <div class="float-chip chip-a">▲ Lucro líquido <strong>+18%</strong></div>
+                <div class="float-chip chip-b">DRE fechado em <strong>D+3</strong></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>DRE Gerencial</span><i>✦</i>
+            <span>Fluxo de Caixa</span><i>✦</i>
+            <span>Projeções &amp; Cenários</span><i>✦</i>
+            <span>Dashboards em Power BI</span><i>✦</i>
+            <span>Consultoria Financeira</span><i>✦</i>
+            <span>DRE Gerencial</span><i>✦</i>
+            <span>Fluxo de Caixa</span><i>✦</i>
+            <span>Projeções &amp; Cenários</span><i>✦</i>
+            <span>Dashboards em Power BI</span><i>✦</i>
+            <span>Consultoria Financeira</span><i>✦</i>
+        </div>
+    </div>
+
+    <!-- ===== DORES ===== -->
+    <section class="section" id="dores">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-kicker">// realidade de muitas empresas</span>
+                <h2 class="section-title">Se uma dessas frases é sua,<br>você está <em>pagando caro</em> por não saber.</h2>
+            </div>
+            <div class="pains-grid">
+                <div class="pain-card fade-in">
+                    <span class="pain-x">✕</span>
+                    <p>"Fatura bem, mas <strong>o dinheiro nunca sobra</strong> — e ninguém sabe explicar por quê."</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <span class="pain-x">✕</span>
+                    <p>"O financeiro é <strong>uma planilha que só uma pessoa entende</strong> — quando está atualizada."</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <span class="pain-x">✕</span>
+                    <p>"Preço, contratação, investimento: tudo decidido <strong>no feeling</strong>."</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <span class="pain-x">✕</span>
+                    <p>"Todo fim de mês é <strong>surpresa no caixa</strong>. Às vezes boa. Geralmente não."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS (BENTO) ===== -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-kicker">// o que eu entrego</span>
+                <h2 class="section-title">Cinco frentes. <em>Um objetivo:</em><br>seus números trabalhando para você.</h2>
+            </div>
+
+            <div class="bento">
+                <article class="bento-card bento-wide fade-in">
+                    <span class="bento-num">01</span>
+                    <h3 class="bento-title">DRE Gerencial</h3>
+                    <p class="bento-desc">Quanto sua empresa <strong>realmente lucra</strong>, mês a mês, por produto ou unidade. Plano de contas gerencial, margem de contribuição, ponto de equilíbrio e análise comentada do resultado — do jeito que diretorias recebem.</p>
+                    <a class="bento-cta" target="_blank" rel="noopener" href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20estruturar%20o%20DRE%20gerencial%20da%20minha%20empresa.">Quero isso na minha empresa →</a>
+                </article>
+
+                <article class="bento-card fade-in">
+                    <span class="bento-num">02</span>
+                    <h3 class="bento-title">Fluxo de Caixa</h3>
+                    <p class="bento-desc">Realizado + projetado. Você sabe <strong>hoje</strong> se o caixa fecha no fim do mês — e no fim do trimestre.</p>
+                    <a class="bento-cta" target="_blank" rel="noopener" href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20organizar%20o%20fluxo%20de%20caixa%20da%20minha%20empresa.">Quero previsibilidade →</a>
+                </article>
+
+                <article class="bento-card fade-in">
+                    <span class="bento-num">03</span>
+                    <h3 class="bento-title">Projeções &amp; Cenários</h3>
+                    <p class="bento-desc">Orçamento, metas e simulações — otimista, base e pessimista — com revisões de <strong>Expectativa × Realidade</strong>.</p>
+                    <a class="bento-cta" target="_blank" rel="noopener" href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20proje%C3%A7%C3%B5es%20e%20cen%C3%A1rios%20para%20minha%20empresa.">Quero enxergar à frente →</a>
+                </article>
+
+                <article class="bento-card bento-wide fade-in">
+                    <span class="bento-num">04</span>
+                    <h3 class="bento-title">Dashboards &amp; Dados</h3>
+                    <p class="bento-desc">Seus números saem da planilha e viram <strong>painéis interativos em Power BI</strong>, atualizados automaticamente via SQL/ETL: DRE, caixa, vendas, indicadores. A verdade do negócio em poucos cliques, de qualquer lugar.</p>
+                    <a class="bento-cta" target="_blank" rel="noopener" href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20dashboards%20autom%C3%A1ticos%20para%20minha%20empresa.">Quero ver em tempo real →</a>
+                </article>
+
+                <article class="bento-card bento-flag fade-in">
+                    <span class="bento-num">05</span>
+                    <h3 class="bento-title">Consultoria Financeira</h3>
+                    <p class="bento-desc">Um economista <strong>CPA-20 ao lado da sua gestão</strong>, todo mês: leitura dos números, reunião de resultados e plano de ação. Como um gerente financeiro sob demanda — sem o custo de um CFO.</p>
+                    <a class="bento-cta" target="_blank" rel="noopener" href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20saber%20mais%20sobre%20a%20consultoria%20financeira%20mensal.">Quero esse braço direito →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-band fade-in">
+        <div class="container stats-grid">
+            <div class="stat">
+                <span class="stat-num">4+</span>
+                <span class="stat-label">anos em finanças corporativas, de startups a multinacionais</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">CPA-20</span>
+                <span class="stat-label">certificação ANBIMA + graduação em Economia</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">C-Level</span>
+                <span class="stat-label">relatórios entregues mensalmente a diretorias</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">remoto, para todo o Brasil</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MÉTODO ===== -->
+    <section class="section" id="metodo">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-kicker">// como funciona</span>
+                <h2 class="section-title">Do caos à clareza <em>em 4 passos.</em></h2>
+            </div>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-num">01</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Conversa gratuita de 30 min. Entendo o momento da empresa e o que existe (ou não) de controle financeiro.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-num">02</div>
+                    <h3>Estruturação</h3>
+                    <p>Organizo as fontes de dados e monto plano de contas, DRE e fluxo de caixa sob medida.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-num">03</div>
+                    <h3>Automação</h3>
+                    <p>Dashboards conectados aos seus dados, atualizados sem planilha manual.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-num">04</div>
+                    <h3>Acompanhamento</h3>
+                    <p>Reunião mensal de resultados, projeções revisadas e plano de ação vivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section" id="sobre">
+        <div class="container about-wrap fade-in">
+            <div class="about-photo-ring">
+                <img src="img/perfil.jpeg" alt="Henrique Pain" class="about-photo">
+            </div>
+            <div class="about-content">
+                <span class="section-kicker">// quem cuida dos seus números</span>
+                <h2 class="section-title">Henrique Pain</h2>
+                <p class="about-lead">Economista · Analista de Dados · CPA-20 (ANBIMA)</p>
+                <p>Mais de 4 anos em finanças corporativas — de startups a multinacionais, incluindo passagem por Lisboa 🇵🇹. Hoje meus relatórios chegam todo mês à mesa de diretorias.</p>
+                <p>Meu diferencial é unir os dois mundos: o rigor de quem domina DRE, caixa e projeções com a técnica de quem automatiza tudo em <strong>SQL, Power BI e Python</strong>. Financeiro sem planilha manual, sem depender da memória de ninguém.</p>
+                <div class="about-links">
+                    <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener" class="about-link">Portfólio técnico ↗</a>
+                    <a href="https://linkedin.com/in/henrique-pain" target="_blank" rel="noopener" class="about-link">LinkedIn ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+        <div class="container container-narrow">
+            <div class="section-head fade-in">
+                <span class="section-kicker">// sem letra miúda</span>
+                <h2 class="section-title">Perguntas <em>diretas.</em></h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item fade-in">
+                    <summary>Minha empresa é pequena. Faz sentido?</summary>
+                    <p>É onde o impacto é maior. Empresa pequena raramente tem financeiro estruturado — e é aí que decisão errada de preço e caixa custa mais caro. O trabalho é dimensionado ao seu tamanho.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Preciso ter sistema ou ERP?</summary>
+                    <p>Não. Trabalho com o que você tem: extratos, planilhas, sistema de vendas. Organizar e automatizar essas fontes faz parte do serviço.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Presencial ou remoto?</summary>
+                    <p>Remoto para todo o Brasil, por videochamada. Estou em Passo Fundo (RS) e atendo presencialmente na região quando faz sentido.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Tem fidelidade?</summary>
+                    <p>Não. Projetos pontuais ou acompanhamento mensal — a permanência se sustenta pelo valor entregue a cada mês.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Substitui meu contador?</summary>
+                    <p>Complementa. O contador cuida do fiscal e das obrigações legais; eu cuido da visão gerencial: quanto você lucra de verdade e o que fazer com essa informação.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final" id="contato">
+        <div class="container fade-in">
+            <h2 class="cta-title">Vamos colocar seus números<br><em>para trabalhar?</em></h2>
+            <p class="cta-sub">Diagnóstico gratuito de 30 minutos. Você sai da conversa sabendo exatamente qual é o próximo passo — feche ou não comigo.</p>
+            <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20agendar%20um%20diagn%C3%B3stico%20financeiro%20gratuito." target="_blank" rel="noopener" class="btn-mega btn-mega-xl">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                Chamar no WhatsApp agora
+            </a>
+            <p class="cta-alt">ou escreva para <a href="mailto:henrique.reolon.pain@gmail.com?subject=Consultoria%20financeira">henrique.reolon.pain@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-logo">HP<span>_</span></span>
+            <nav class="footer-nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#metodo">Método</a>
+                <a href="#sobre">Sobre</a>
+                <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Portfólio ↗</a>
+            </nav>
+            <p class="footer-copy">© 2026 Henrique Pain · Passo Fundo, RS</p>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Vim%20pela%20sua%20p%C3%A1gina%20e%20quero%20conversar." target="_blank" rel="noopener" class="wa-fab" aria-label="Conversar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

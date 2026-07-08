@@ -1,0 +1,6 @@
+# Tooling local do Claude Code
+.claude/
+
+# Sistema
+Thumbs.db
+desktop.ini

@@ -114,27 +114,29 @@
     <section class="section section-alt" id="dores">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Isso soa familiar?</h2>
+                <h2 class="section-title">De que lado sua empresa está hoje?</h2>
             </div>
-            <div class="pains-grid">
-                <div class="pain-card fade-in">
-                    <div class="pain-icon">📉</div>
-                    <p>"A empresa fatura bem, mas <strong>o dinheiro nunca sobra</strong> — e eu não sei exatamente por quê."</p>
+            <div class="contrast-grid">
+                <div class="contrast-panel contrast-before fade-in">
+                    <span class="contrast-tag">Hoje, sem estrutura</span>
+                    <ul>
+                        <li>O financeiro vive numa planilha que só uma pessoa entende</li>
+                        <li>A empresa fatura bem, mas o dinheiro some sem explicação</li>
+                        <li>Preço, contratação e investimento decididos no feeling</li>
+                        <li>Todo fim de mês é surpresa no caixa — às vezes boa, geralmente não</li>
+                    </ul>
                 </div>
-                <div class="pain-card fade-in">
-                    <div class="pain-icon">🗂️</div>
-                    <p>"Meu financeiro é <strong>uma planilha que só eu entendo</strong> (quando está atualizada)."</p>
-                </div>
-                <div class="pain-card fade-in">
-                    <div class="pain-icon">🎯</div>
-                    <p>"Tomo decisões de preço, contratação e investimento <strong>no feeling</strong>, sem números confiáveis."</p>
-                </div>
-                <div class="pain-card fade-in">
-                    <div class="pain-icon">⏰</div>
-                    <p>"Todo fim de mês é surpresa: <strong>não consigo prever</strong> se vai faltar ou sobrar caixa."</p>
+                <div class="contrast-panel contrast-after fade-in">
+                    <span class="contrast-tag">Com o financeiro estruturado</span>
+                    <ul>
+                        <li>Números confiáveis, atualizados sem trabalho manual</li>
+                        <li>Você sabe exatamente para onde vai cada real</li>
+                        <li>Cada decisão sustentada por dados e cenários simulados</li>
+                        <li>Caixa projetado com semanas de antecedência</li>
+                    </ul>
+                    <a href="#servicos" class="contrast-link">Como chegar aqui →</a>
                 </div>
             </div>
-            <p class="pains-closing fade-in">Se você se identificou com alguma dessas frases, os serviços abaixo foram desenhados para a sua empresa.</p>
         </div>
     </section>
 
@@ -276,38 +278,46 @@
         <div class="container">
             <div class="section-header fade-in">
                 <h2 class="section-title">O que chega na sua mesa</h2>
-                <p class="section-sub">Exemplos do padrão de entrega — dashboards interativos que se atualizam sozinhos, não planilhas soltas. Clique para ampliar. <em>(dados de demonstração)</em></p>
+                <p class="section-sub">Dashboards interativos que se atualizam sozinhos — não planilhas soltas. Navegue pelos exemplos:</p>
             </div>
-            <div class="examples-grid">
-                <figure class="example-card fade-in">
-                    <a href="img/exemplos/dre.webp" target="_blank" rel="noopener" class="example-link">
-                        <img src="img/exemplos/dre.webp" alt="Dashboard de DRE gerencial em Power BI: receita, resultado e margem mês a mês" loading="lazy">
-                    </a>
-                    <figcaption>
+            <div class="showcase fade-in">
+                <div class="showcase-tabs" role="tablist" aria-label="Exemplos de dashboards">
+                    <button class="showcase-tab active" role="tab" aria-selected="true"
+                        data-img="img/exemplos/dre.webp"
+                        data-title="DRE Gerencial"
+                        data-alt="Dashboard de DRE gerencial em Power BI: receita, resultado e margem mês a mês">
                         <strong>DRE Gerencial</strong>
-                        <span>Resultado mês a mês, margem e quebra por categoria — direto no Power BI</span>
-                    </figcaption>
-                </figure>
-                <figure class="example-card fade-in">
-                    <a href="img/exemplos/fluxo.webp" target="_blank" rel="noopener" class="example-link">
-                        <img src="img/exemplos/fluxo.webp" alt="Dashboard de fluxo de caixa projetado: dias até quebra de caixa e previsto versus realizado" loading="lazy">
-                    </a>
-                    <figcaption>
+                        <span>Resultado mês a mês, margem e quebra por categoria</span>
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false"
+                        data-img="img/exemplos/fluxo.webp"
+                        data-title="Fluxo de Caixa & Projeção"
+                        data-alt="Dashboard de fluxo de caixa projetado: dias até quebra de caixa e previsto versus realizado">
                         <strong>Fluxo de Caixa &amp; Projeção</strong>
-                        <span>Quantos dias de caixa você tem, previsto × realizado e forecast diário</span>
-                    </figcaption>
-                </figure>
-                <figure class="example-card fade-in">
-                    <a href="img/exemplos/precificacao.webp" target="_blank" rel="noopener" class="example-link">
-                        <img src="img/exemplos/precificacao.webp" alt="Simulador de precificação com elasticidade-preço: impacto de cenários de preço na receita" loading="lazy">
-                    </a>
-                    <figcaption>
+                        <span>Quantos dias de caixa você tem e o forecast diário</span>
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false"
+                        data-img="img/exemplos/precificacao.webp"
+                        data-title="Simulador de Precificação"
+                        data-alt="Simulador de precificação com elasticidade-preço: impacto de cenários de preço na receita">
                         <strong>Simulador de Precificação</strong>
-                        <span>E se o preço mudar? Impacto de cenários direto na receita projetada</span>
-                    </figcaption>
-                </figure>
+                        <span>E se o preço mudar? Impacto direto na receita projetada</span>
+                    </button>
+                    <p class="showcase-foot">Quer o lado técnico? <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Portfólio completo ↗</a></p>
+                </div>
+                <div class="showcase-stage">
+                    <div class="showcase-frame">
+                        <div class="frame-bar">
+                            <span></span><span></span><span></span>
+                            <em id="frameTitle">DRE Gerencial</em>
+                        </div>
+                        <a id="showcaseLink" href="img/exemplos/dre.webp" target="_blank" rel="noopener" title="Ampliar">
+                            <img id="showcaseImg" src="img/exemplos/dre.webp" alt="Dashboard de DRE gerencial em Power BI: receita, resultado e margem mês a mês">
+                        </a>
+                    </div>
+                    <p class="showcase-hint">Clique na imagem para ampliar &nbsp;·&nbsp; dados de demonstração</p>
+                </div>
             </div>
-            <p class="examples-note fade-in">Quer ver o lado técnico por trás? <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Portfólio completo ↗</a></p>
         </div>
     </section>
 
@@ -385,7 +395,10 @@
                     <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                     Chamar no WhatsApp
                 </a>
-                <a href="mailto:henrique.reolon.pain@gmail.com?subject=Consultoria%20financeira" class="btn btn-outline-light">✉ henrique.reolon.pain@gmail.com</a>
+                <button type="button" class="btn btn-outline-light btn-email" id="emailBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+                    <span id="emailBtnLabel">Prefere e-mail? Copiar endereço</span>
+                </button>
             </div>
             <p class="contact-alt fade-in">Prefere conhecer meu trabalho técnico antes? <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Veja o portfólio de projetos ↗</a></p>
         </div>

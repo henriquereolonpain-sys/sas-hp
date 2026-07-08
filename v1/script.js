@@ -68,6 +68,75 @@ const fadeObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 // ============================================================
+// SHOWCASE DE EXEMPLOS — abas trocam a imagem em destaque
+// ============================================================
+const showcaseImg = document.getElementById('showcaseImg');
+const showcaseLink = document.getElementById('showcaseLink');
+const frameTitle = document.getElementById('frameTitle');
+const showcaseTabs = document.querySelectorAll('.showcase-tab');
+
+showcaseTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        if (tab.classList.contains('active')) return;
+        showcaseTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const { img, title, alt } = tab.dataset;
+        showcaseImg.classList.add('swapping');
+        setTimeout(() => {
+            showcaseImg.src = img;
+            showcaseImg.alt = alt;
+            showcaseLink.href = img;
+            frameTitle.textContent = title;
+            showcaseImg.onload = () => showcaseImg.classList.remove('swapping');
+        }, 220);
+    });
+});
+
+// ============================================================
+// COPIAR E-MAIL — endereço fora do HTML (evita robôs de spam)
+// ============================================================
+const emailBtn = document.getElementById('emailBtn');
+if (emailBtn) {
+    const emailLabel = document.getElementById('emailBtnLabel');
+    const endereco = ['henrique', '.', 'reolon', '.', 'pain', '@', 'gmail', '.', 'com'].join('');
+    let emailTimer;
+    emailBtn.addEventListener('click', () => {
+        const feito = () => {
+            emailBtn.classList.add('copied');
+            emailLabel.textContent = 'E-mail copiado ✓';
+            clearTimeout(emailTimer);
+            emailTimer = setTimeout(() => {
+                emailBtn.classList.remove('copied');
+                emailLabel.textContent = 'Prefere e-mail? Copiar endereço';
+            }, 2600);
+        };
+        const copiaLegado = () => {
+            const ta = document.createElement('textarea');
+            ta.value = endereco;
+            ta.setAttribute('readonly', '');
+            ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+            document.body.appendChild(ta);
+            ta.select();
+            let ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) { /* sem suporte */ }
+            document.body.removeChild(ta);
+            if (ok) feito();
+            else window.location.href = 'mailto:' + endereco;
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(endereco).then(feito).catch(copiaLegado);
+        } else {
+            copiaLegado();
+        }
+    });
+}
+
+// ============================================================
 // VÍDEO DO HERO
 // ============================================================
 const heroVideo = document.querySelector('.hero-video');

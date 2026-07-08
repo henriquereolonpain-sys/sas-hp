@@ -469,16 +469,9 @@ img { display: block; max-width: 100%; }
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
 }
-.frame-bar span {
-    width: 10px; height: 10px; border-radius: 50%;
-    background: var(--border);
-}
-.frame-bar span:nth-child(1) { background: #f87171; }
-.frame-bar span:nth-child(2) { background: #fbbf24; }
-.frame-bar span:nth-child(3) { background: #34d399; }
 .frame-bar em {
     font-style: normal; font-size: .75rem; font-weight: 600;
-    color: var(--text-light); margin-left: .5rem;
+    color: var(--text-light);
 }
 .showcase-frame a { display: block; cursor: zoom-in; }
 .showcase-frame img {

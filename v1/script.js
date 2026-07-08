@@ -66,3 +66,21 @@ const fadeObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// ============================================================
+// VÍDEO DO HERO
+// ============================================================
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        // pausa para quem prefere menos movimento
+        heroVideo.removeAttribute('autoplay');
+        heroVideo.pause();
+    } else {
+        // alguns navegadores bloqueiam autoplay — retenta no load e na 1ª interação
+        const tryPlay = () => { heroVideo.play().catch(() => {}); };
+        tryPlay();
+        document.addEventListener('click', tryPlay, { once: true });
+        document.addEventListener('touchstart', tryPlay, { once: true });
+    }
+}

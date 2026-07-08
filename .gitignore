@@ -1,6 +1,9 @@
 # Tooling local do Claude Code
 .claude/
 
+# Vídeos brutos de banco de imagens (a versão comprimida vai em v1/video/)
+/*.mp4
+
 # Sistema
 Thumbs.db
 desktop.ini

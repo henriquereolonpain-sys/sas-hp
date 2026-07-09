@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique Pain — Consultoria Financeira & Dados</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230b241a'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='13' fill='%23dcbb54'>HP</text></svg>">
+
+    <!-- SEO & Open Graph -->
+    <meta name="description" content="Consultoria financeira para pequenas e médias empresas: DRE gerencial, fluxo de caixa, projeções, análise de dados e dashboards. Clareza financeira para decidir melhor.">
+    <meta property="og:title"       content="Henrique Pain — Consultoria Financeira & Dados">
+    <meta property="og:description" content="DRE gerencial, fluxo de caixa, projeções e dashboards para sua empresa decidir com dados, não com achismo.">
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="pt_BR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">HP<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#como-funciona">Como funciona</a></li>
+                <li><a href="#exemplos">Exemplos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#contato" class="nav-cta">Fale comigo</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+            <video class="hero-video is-on" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg">
+                <source src="video/hero.mp4" type="video/mp4">
+            </video>
+            <video class="hero-video" muted playsinline preload="none" aria-hidden="true"></video>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Remoto para todo o Brasil &nbsp;·&nbsp; Presencial em Passo Fundo e região</span>
+                <h1 class="hero-headline">Sua empresa sabe exatamente <span>quanto ganha, quanto gasta</span> e para onde está indo?</h1>
+                <p class="hero-desc">
+                    Estruturo a área financeira da sua empresa com DRE gerencial, fluxo de caixa,
+                    projeções e dashboards — para você decidir com dados, não com achismo.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20conversar%20sobre%20os%20servi%C3%A7os%20financeiros." target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Agendar diagnóstico gratuito
+                    </a>
+                    <a href="#servicos" class="btn btn-secondary">Conhecer os serviços</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Anos em finanças corporativas</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">CPA-20</span>
+                        <span class="stat-label">Certificação ANBIMA</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">C-Level</span>
+                        <span class="stat-label">Relatórios entregues à diretoria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card-stack">
+                    <div class="visual-card vc-1">
+                        <div class="vc-label">DRE Gerencial</div>
+                        <div class="vc-value">Resultado real, mês a mês</div>
+                    </div>
+                    <div class="visual-card vc-2">
+                        <div class="vc-label">Fluxo de Caixa</div>
+                        <div class="vc-value">Previsibilidade de entradas e saídas</div>
+                    </div>
+                    <div class="visual-card vc-3">
+                        <div class="vc-label">Projeções & Cenários</div>
+                        <div class="vc-value">Expectativa × Realidade</div>
+                    </div>
+                    <div class="visual-card vc-4">
+                        <div class="vc-label">Dashboards & Dados</div>
+                        <div class="vc-value">Indicadores em tempo real</div>
+                    </div>
+                    <div class="visual-card vc-5">
+                        <div class="vc-label">Consultoria Financeira</div>
+                        <div class="vc-value">Um economista ao lado da sua gestão</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DORES ===== -->
+    <section class="section section-alt" id="dores">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">De que lado sua empresa está hoje?</h2>
+            </div>
+            <div class="contrast-grid">
+                <div class="contrast-panel contrast-before fade-in">
+                    <span class="contrast-tag">Hoje, sem estrutura</span>
+                    <ul>
+                        <li>O financeiro vive numa planilha que só uma pessoa entende</li>
+                        <li>A empresa fatura bem, mas o dinheiro some sem explicação</li>
+                        <li>Preço, contratação e investimento decididos no feeling</li>
+                        <li>Todo fim de mês é surpresa no caixa — às vezes boa, geralmente não</li>
+                    </ul>
+                </div>
+                <div class="contrast-panel contrast-after fade-in">
+                    <span class="contrast-tag">Com o financeiro estruturado</span>
+                    <ul>
+                        <li>Números confiáveis, atualizados sem trabalho manual</li>
+                        <li>Você sabe exatamente para onde vai cada real</li>
+                        <li>Cada decisão sustentada por dados e cenários simulados</li>
+                        <li>Caixa projetado com semanas de antecedência</li>
+                    </ul>
+                    <a href="#servicos" class="contrast-link">Como chegar aqui →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Serviços</h2>
+                <p class="section-sub">Do básico bem-feito à inteligência de dados — contratados de forma avulsa ou como acompanhamento mensal.</p>
+            </div>
+            <div class="services-grid">
+
+                <article class="service-card fade-in">
+                    <div class="service-accent" style="--c1:var(--deco-1)"></div>
+                    <div class="service-body">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+                        <h3 class="service-title">DRE Gerencial</h3>
+                        <p class="service-desc">Demonstrativo de resultados estruturado do jeito certo: receitas, custos e despesas organizados para mostrar <strong>quanto a empresa realmente lucra</strong>, mês a mês, por produto ou unidade.</p>
+                        <ul class="service-list">
+                            <li>Estrutura de plano de contas gerencial</li>
+                            <li>Margem de contribuição e ponto de equilíbrio</li>
+                            <li>Análise mensal de resultado com comentários</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-accent" style="--c1:var(--deco-2)"></div>
+                    <div class="service-body">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <h3 class="service-title">Fluxo de Caixa</h3>
+                        <p class="service-desc">Controle e projeção de entradas e saídas para você <strong>nunca mais ser pego de surpresa</strong>: saber hoje se o caixa fecha no fim do mês — e no fim do trimestre.</p>
+                        <ul class="service-list">
+                            <li>Fluxo de caixa realizado e projetado</li>
+                            <li>Categorização de receitas e despesas</li>
+                            <li>Alertas de necessidade de capital de giro</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-accent" style="--c1:var(--deco-3)"></div>
+                    <div class="service-body">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <h3 class="service-title">Projeções & Cenários</h3>
+                        <p class="service-desc">Orçamento anual, metas e simulação de cenários (otimista, base, pessimista) com revisões periódicas de <strong>Expectativa × Realidade</strong> — a mesma rotina que entrego a diretorias.</p>
+                        <ul class="service-list">
+                            <li>Orçamento e forecast rolling</li>
+                            <li>Simulação de preço, contratação e expansão</li>
+                            <li>Revisões trimestrais de projeção</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-accent" style="--c1:var(--deco-4)"></div>
+                    <div class="service-body">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        <h3 class="service-title">Análise de Dados & Dashboards</h3>
+                        <p class="service-desc">Seus números saem das planilhas e viram <strong>dashboards interativos em Power BI</strong>: DRE, caixa, vendas e indicadores atualizados automaticamente, acessíveis de qualquer lugar.</p>
+                        <ul class="service-list">
+                            <li>Dashboard executivo (DRE, EBITDA, ROI)</li>
+                            <li>Pipeline de dados automatizado (SQL/ETL)</li>
+                            <li>Análise de vendas, clientes e precificação</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-card fade-in">
+                    <div class="service-accent" style="--c1:var(--deco-5)"></div>
+                    <div class="service-body">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <h3 class="service-title">Consultoria Financeira</h3>
+                        <p class="service-desc">Acompanhamento mensal com um economista certificado ao lado da sua gestão: leitura dos números, <strong>plano de ação e reunião de resultados</strong> — como um gerente financeiro sob demanda.</p>
+                        <ul class="service-list">
+                            <li>Reunião mensal de análise de resultados</li>
+                            <li>Plano de ação para custos e margem</li>
+                            <li>Suporte contínuo para decisões financeiras</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="service-card service-card-cta fade-in">
+                    <div class="service-body">
+                        <span class="cta-kicker">✦ Diagnóstico gratuito</span>
+                        <h3 class="service-title">Não sabe por onde começar?</h3>
+                        <p class="service-desc">Em 30 minutos de conversa eu avalio o estágio financeiro da sua empresa e te digo qual é o próximo passo — feche ou não comigo.</p>
+                        <ul class="cta-checks">
+                            <li>Conversa de 30 minutos, por videochamada</li>
+                            <li>Sem custo e sem compromisso</li>
+                            <li>Você sai com um direcionamento claro</li>
+                        </ul>
+                        <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20agendar%20um%20diagn%C3%B3stico%20financeiro%20gratuito." target="_blank" rel="noopener" class="btn btn-primary btn-cta">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Agendar meu diagnóstico
+                        </a>
+                        <span class="cta-note">Resposta em poucos minutos no WhatsApp</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA ===== -->
+    <section class="section section-alt" id="como-funciona">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Como funciona</h2>
+                <p class="section-sub">Um processo simples, do primeiro contato aos números na sua mão.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-num">1</div>
+                    <h3 class="step-title">Diagnóstico</h3>
+                    <p class="step-desc">Conversa gratuita para entender o momento da empresa e mapear o que existe hoje de controle financeiro.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-num">2</div>
+                    <h3 class="step-title">Estruturação</h3>
+                    <p class="step-desc">Organizo os dados, monto o plano de contas, o DRE e o fluxo de caixa sob medida para o seu negócio.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-num">3</div>
+                    <h3 class="step-title">Dashboards</h3>
+                    <p class="step-desc">Automatizo a atualização e entrego painéis claros, com os indicadores que importam para a sua decisão.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-num">4</div>
+                    <h3 class="step-title">Acompanhamento</h3>
+                    <p class="step-desc">Reuniões periódicas de resultados, projeções revisadas e um plano de ação vivo, mês após mês.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXEMPLOS ===== -->
+    <section class="section" id="exemplos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">O que chega na sua mesa</h2>
+                <p class="section-sub">Dashboards interativos que se atualizam sozinhos — não planilhas soltas. Navegue pelos exemplos:</p>
+            </div>
+            <div class="showcase fade-in">
+                <div class="showcase-tabs" role="tablist" aria-label="Exemplos de dashboards">
+                    <button class="showcase-tab active" role="tab" aria-selected="true"
+                        data-img="img/exemplos/dre.webp"
+                        data-title="DRE Gerencial"
+                        data-alt="Ilustração de dashboard de DRE gerencial: receita, lucro e margem mês a mês">
+                        <strong>DRE Gerencial</strong>
+                        <span>Resultado mês a mês, margem e quebra por categoria</span>
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false"
+                        data-img="img/exemplos/fluxo.webp"
+                        data-title="Fluxo de Caixa & Projeção"
+                        data-alt="Ilustração de dashboard de fluxo de caixa: saldo projetado, dias de caixa e compromissos">
+                        <strong>Fluxo de Caixa &amp; Projeção</strong>
+                        <span>Quantos dias de caixa você tem e o forecast diário</span>
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false"
+                        data-img="img/exemplos/precificacao.webp"
+                        data-title="Simulador de Precificação"
+                        data-alt="Ilustração de simulador de precificação: receita projetada por cenário de preço">
+                        <strong>Simulador de Precificação</strong>
+                        <span>E se o preço mudar? Impacto direto na receita projetada</span>
+                    </button>
+                    <button class="showcase-tab" role="tab" aria-selected="false"
+                        data-img="img/exemplos/analise.webp"
+                        data-title="Análise Mensal de Resultados"
+                        data-alt="Ilustração de relatório de análise mensal: previsto versus realizado, destaques do mês e plano de ação">
+                        <strong>Análise Mensal de Resultados</strong>
+                        <span>Expectativa × Realidade, destaques do mês e plano de ação</span>
+                    </button>
+                    <p class="showcase-foot">Quer o lado técnico? <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Portfólio completo ↗</a></p>
+                </div>
+                <div class="showcase-stage">
+                    <div class="showcase-frame">
+                        <div class="frame-bar">
+                            <em id="frameTitle">DRE Gerencial</em>
+                        </div>
+                        <a id="showcaseLink" href="img/exemplos/dre.webp" target="_blank" rel="noopener" title="Ampliar">
+                            <img id="showcaseImg" src="img/exemplos/dre.webp" alt="Ilustração de dashboard de DRE gerencial: receita, lucro e margem mês a mês">
+                        </a>
+                    </div>
+                    <p class="showcase-hint">Clique na imagem para ampliar &nbsp;·&nbsp; ilustrações com dados fictícios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section" id="sobre">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Quem vai cuidar dos seus números</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-photo fade-in">
+                    <div class="photo-placeholder">
+                        <img src="img/perfil.jpeg" alt="Henrique Pain" class="profile-photo">
+                    </div>
+                    <div class="about-chips">
+                        <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener" class="chip">Ver portfólio completo ↗</a>
+                        <a href="https://linkedin.com/in/henrique-pain" target="_blank" rel="noopener" class="chip">LinkedIn ↗</a>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <p class="about-lead">Henrique Pain — Economista, Analista de Dados e certificado CPA-20 (ANBIMA).</p>
+                    <p>Há mais de 4 anos trabalho com finanças corporativas em contextos que vão de startups a multinacionais — incluindo experiência internacional em Lisboa, Portugal. Hoje estruturo controles financeiros e dashboards que chegam mensalmente à mesa de diretorias.</p>
+                    <p>Meu diferencial é unir os dois mundos: o rigor de quem entende de DRE, fluxo de caixa e projeções, com a técnica de quem domina dados — SQL, Power BI e automação. O resultado é um financeiro que não depende de planilha manual e mostra a verdade do negócio em poucos cliques.</p>
+                    <div class="cred-badges">
+                        <span class="cred-badge">Graduação em Economia (UPF)</span>
+                        <span class="cred-badge">CPA-20 · ANBIMA</span>
+                        <span class="cred-badge">Pós em Gestão Financeira</span>
+                        <span class="cred-badge">Power BI · SQL · Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-alt" id="faq">
+        <div class="container container-narrow">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Dúvidas frequentes</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item fade-in">
+                    <summary>Minha empresa é pequena. Esses serviços fazem sentido para mim?</summary>
+                    <p>Sim — na verdade é onde eles geram mais impacto. Empresas pequenas raramente têm um financeiro estruturado, e é exatamente aí que decisões erradas de preço e caixa custam mais caro. O trabalho é dimensionado para o tamanho do seu negócio.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Preciso ter algum sistema ou ERP?</summary>
+                    <p>Não. Trabalho com o que você já tem — extratos bancários, planilhas, sistema de vendas ou ERP. Parte do serviço é justamente organizar essas fontes e automatizar a atualização.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>O atendimento é presencial ou remoto?</summary>
+                    <p>Remoto, para todo o Brasil, com reuniões por videochamada. Estou em Passo Fundo (RS) e atendo presencialmente na região quando faz sentido.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Como é a contratação? Tem fidelidade?</summary>
+                    <p>Existem dois formatos: projetos pontuais (ex.: estruturar o DRE e o fluxo de caixa) e acompanhamento mensal. Sem fidelidade — a permanência se sustenta pelo valor entregue a cada mês.</p>
+                </details>
+                <details class="faq-item fade-in">
+                    <summary>Isso substitui meu contador?</summary>
+                    <p>Não — complementa. O contador cuida da parte fiscal e das obrigações legais; eu cuido da visão gerencial: quanto você lucra de verdade, para onde vai o caixa e o que fazer com essa informação.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contact-section section" id="contato">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Vamos organizar o financeiro da sua empresa?</h2>
+                <p class="contact-sub">O primeiro passo é uma conversa de 30 minutos, gratuita e sem compromisso.</p>
+            </div>
+            <div class="contact-actions fade-in">
+                <a href="https://wa.me/5554981293329?text=Ol%C3%A1%2C%20Henrique!%20Quero%20agendar%20um%20diagn%C3%B3stico%20financeiro%20gratuito." target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    Chamar no WhatsApp
+                </a>
+                <button type="button" class="btn btn-outline-light btn-email" id="emailBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg>
+                    <span id="emailBtnLabel">Prefere e-mail? Copiar endereço</span>
+                </button>
+            </div>
+            <p class="contact-alt fade-in">Prefere conhecer meu trabalho técnico antes? <a href="https://henriquereolonpain-sys.github.io" target="_blank" rel="noopener">Veja o portfólio de projetos ↗</a></p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">HP<span>.</span></span>
+                <span class="footer-tagline">Clareza financeira para decidir melhor.</span>
+            </div>
+            <div class="footer-nav">
+                <a href="#servicos">Serviços</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Henrique Pain · Passo Fundo, RS</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

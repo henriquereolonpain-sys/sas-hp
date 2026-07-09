@@ -137,17 +137,71 @@ if (emailBtn) {
 }
 
 // ============================================================
-// VÍDEO DO HERO
+// VÍDEOS DO HERO — carrossel com crossfade
+// Cada vídeo roda até o fim e cede a vez ao próximo da playlist.
+// Sem JS, o primeiro vídeo continua em loop (atributo no HTML).
 // ============================================================
-const heroVideo = document.querySelector('.hero-video');
-if (heroVideo) {
+const heroVideos = document.querySelectorAll('.hero-video');
+if (heroVideos.length) {
+    const principal = heroVideos[0];
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         // pausa para quem prefere menos movimento
-        heroVideo.removeAttribute('autoplay');
-        heroVideo.pause();
+        principal.removeAttribute('autoplay');
+        principal.pause();
     } else {
+        const PLAYLIST = [
+            'video/hero.mp4',     // assinatura de documentos
+            'video/hero-b.mp4',   // organização de formulários
+            'video/hero-c.mp4',   // anotações no caderno
+            'video/hero-d.mp4',   // conferência de valores
+        ];
+
+        if (heroVideos.length > 1) {
+            let atual = 0;   // índice na playlist
+            let ativo = 0;   // qual dos dois <video> está visível
+            heroVideos.forEach(v => v.removeAttribute('loop'));
+
+            const prepara = (el, src) => {
+                if (el.getAttribute('data-src') !== src) {
+                    el.setAttribute('data-src', src);
+                    el.preload = 'auto';
+                    el.src = src;
+                    el.load();
+                }
+            };
+
+            let trocando = false; // evita trocas sobrepostas
+            const troca = () => {
+                if (trocando) return;
+                trocando = true;
+                const proximo = (atual + 1) % PLAYLIST.length;
+                const elAtivo = heroVideos[ativo];
+                const elProx = heroVideos[1 - ativo];
+                prepara(elProx, PLAYLIST[proximo]);
+                try { elProx.currentTime = 0; } catch (e) { /* metadata ainda não carregada */ }
+                // play() força o carregamento e resolve quando começa a tocar
+                elProx.play().then(() => {
+                    elProx.classList.add('is-on');
+                    elAtivo.classList.remove('is-on');
+                    elAtivo.pause();
+                    atual = proximo;
+                    ativo = 1 - ativo;
+                    trocando = false;
+                }).catch(() => {
+                    // se o play falhar, reinicia o vídeo atual
+                    elAtivo.currentTime = 0;
+                    elAtivo.play().catch(() => {});
+                    trocando = false;
+                });
+            };
+
+            heroVideos.forEach(v => v.addEventListener('ended', troca));
+            // pré-carrega o segundo vídeo com a página já ociosa
+            setTimeout(() => prepara(heroVideos[1], PLAYLIST[1]), 4000);
+        }
+
         // alguns navegadores bloqueiam autoplay — retenta no load e na 1ª interação
-        const tryPlay = () => { heroVideo.play().catch(() => {}); };
+        const tryPlay = () => { principal.play().catch(() => {}); };
         tryPlay();
         document.addEventListener('click', tryPlay, { once: true });
         document.addEventListener('touchstart', tryPlay, { once: true });
